@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.log
+data/echoaid.json
+.DS_Store
+coverage/

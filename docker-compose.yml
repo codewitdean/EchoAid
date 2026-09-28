@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      NODE_ENV: development
+      CORS_ORIGIN: http://localhost:3000
+      DATA_FILE: /app/data/echoaid.json
+      ASSEMBLYAI_INGEST_KEY: dev-assemblyai-key
+    volumes:
+      - echoaid_data:/app/data
+
+volumes:
+  echoaid_data:
